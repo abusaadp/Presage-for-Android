@@ -1,0 +1,15 @@
+*.Plo
+*.Po
+*.lo
+*.o
+*.la
+**/.libs/
+**/.deps/
+*Makefile
+*Makefile.in
+presageEngine/Makefile.in
+*.log
+*.status
+presageEngine/tools/presage_demo
+presageEngine/tools/presage_demo_text
+presageEngine/tools/presage_simulator
