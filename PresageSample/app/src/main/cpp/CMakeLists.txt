@@ -32,7 +32,7 @@ add_library(
         SHARED
 
         # Provides a relative path to your source file(s).
-        native-lib.cpp
+        presage-lib.cpp
         presage/presage.cpp
         ${CORE_SOURCES}
         ${CONTEXT_TRACKERS_SOURCES}
