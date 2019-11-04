@@ -71,27 +71,7 @@ Java_com_avazapp_presagesample_MainActivity_getSuggesstionsForWord(JNIEnv *env, 
     return result;
 }
 
-extern "C" JNIEXPORT jstring JNICALL
-Java_com_avazapp_presagesample_MainActivity_stringFromJNI(
-        JNIEnv *env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++";
-    return env->NewStringUTF(hello.c_str());
+extern "C" void Java_com_avazapp_presagesample_MainActivity_setFilePath(JNIEnv *env,jobject obj, jstring dictPath) {
+    callback->setFilePath(ConvertJString(env,dictPath));
 }
-
-extern "C" JNIEXPORT jstring JNICALL
-Java_com_avazapp_presagesample_MainActivity_mulFromJNI(
-        JNIEnv *env,
-        jobject obj, jstring value, jint mul) {
-
-    std::string sValue1 = ConvertJString( env, value );
-    try {
-        int res = std::stoi(sValue1) * mul;
-        return env->NewStringUTF((std::to_string(res)).c_str());
-    } catch (int x) {
-        return env->NewStringUTF("Please wait");
-    }
-
-}
-
 

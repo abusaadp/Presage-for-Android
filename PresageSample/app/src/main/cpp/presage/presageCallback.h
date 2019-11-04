@@ -40,6 +40,7 @@ extern "C" {
 #ifdef __cplusplus
 #ifndef _MSC_VER
 
+#include "core/utility.h"
 #include <string>
 #include <sstream>
 
@@ -70,6 +71,11 @@ public:
 
     virtual std::string get_past_stream() const = 0;
     virtual std::string get_future_stream() const = 0;
+
+    void setFilePath(const std::string& path) {
+        filePath = path;
+        Utility::filePath = filePath;
+    }
 
 protected:
     PresageCallback() { };

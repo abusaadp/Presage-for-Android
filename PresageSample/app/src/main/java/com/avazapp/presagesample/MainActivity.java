@@ -163,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'presage-lib' native library,
      * which is packaged with this application.
      */
-    public native String[] getSuggesstionsForWord(String word);
     public native void PresageLib(String dictPath);
+    public native String[] getSuggesstionsForWord(String word);
+    public native void setFilePath(String dictPath);
 }
